@@ -27,7 +27,7 @@ int main()
     printf("\n");
     for(i=0;i<r;i++)
     {
-        min = a[i][j];
+        min = a[i][0];
         for(j=0;j<c;j++)
         {
             if(min > a[i][j])//find minimum from ith row
