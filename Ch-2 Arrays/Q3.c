@@ -2,18 +2,18 @@
 #include<stdio.h>
 struct poly
 {
-    int co,p;
+    int co,p;//cofficient = co and power = p
 };
 int main()
 {
     int n1,n2,i,j;
-    printf("Enter the terms of Poly1: ");
+    printf("Enter the terms of Poly1: ");//polynomial 1 terms input
     scanf("%d",&n1);
-    printf("Enter the terms of Poly2: ");
+    printf("Enter the terms of Poly2: ");//polynomial 2 terms input
     scanf("%d",&n2);
     struct poly poly1[n1],poly2[n2];
     printf("INPUT POLY1 EXPRESSION\n");
-    for(i=0;i<n1;i++)
+    for(i=0;i<n1;i++)//polynomial 1 input
     {
         printf("Enter power = ");
         scanf("%d",&poly1[i].p);
@@ -21,7 +21,7 @@ int main()
         scanf("%d",&poly1[i].co);
     }
     printf("\n\n\n");
-    printf("INPUT POLY2 EXPRESSION\n");
+    printf("INPUT POLY2 EXPRESSION\n");//polynomial 2 input
     for(i=0;i<n2;i++)
     {
         printf("Enter power = ");
@@ -39,7 +39,7 @@ int main()
         else
             printf("%d^%d+",poly1[i].co,poly1[i].p);
     }
-    printf("\n");
+    printf("\n\n\n");
     //display poly2
     printf("EXP 2--> ");
     for(i=0;i<n2;i++)
@@ -50,6 +50,7 @@ int main()
             printf("%d^%d+",poly2[i].co,poly2[i].p);
     }
     printf("\n");
+    printf("Product of Polynomials = \n");//display poly1 and poly2 product
     for(i=0;i<n1;i++)
     {
         for(j=0;j<n2;j++)
