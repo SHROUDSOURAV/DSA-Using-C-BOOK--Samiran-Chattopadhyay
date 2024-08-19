@@ -4,8 +4,8 @@
 int main()
 {
     int r,c;//r = rows , c = columns
-    int i,j=0,s=0;//loop variables
-    int min,max,count=0;//minimum and maximum
+    int i,j,s;//loop variables
+    int min,max,count=0,count1=0;//minimum and maximum
     printf("Enter the rows : ");//row input
     scanf("%d",&r);
     printf("Enter the columns : ");//column input
@@ -27,7 +27,8 @@ int main()
     printf("\n");
     for(i=0;i<r;i++)
     {
-        min = a[i][0];
+        min = a[i][0];//by default value of min(if min is already minimum in ith row)
+        s=0;//by default position of s
         for(j=0;j<c;j++)
         {
             if(min > a[i][j])//find minimum from ith row
@@ -48,7 +49,12 @@ int main()
             }
         }
         if(count > 0)
+        {
             printf("Element Found = %d\n",max);
+            count1+=1;
+        }
     }
+    if(count1 == 0)
+        printf("NOT FOUND!!!\n");
     return 0;
 }
