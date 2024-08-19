@@ -13,7 +13,7 @@ int main()
         printf("Multiplication not Possible\n");
     else
     {
-        printf("Matrice 1 INPUT:\n");
+        printf("Matrice 1 INPUT:\n");//input matrice 1
         for(i=0;i<r1;i++)
         {
             for(j=0;j<c1;j++)
@@ -21,7 +21,7 @@ int main()
                 scanf("%d",&a[i][j]);
             }
         }
-        printf("Matrice 2 INPUT:\n");
+        printf("Matrice 2 INPUT:\n");//input matrice 2
         for(i=0;i<r2;i++)
         {
             for(j=0;j<c2;j++)
@@ -29,14 +29,14 @@ int main()
                 scanf("%d",&b[i][j]);
             }
         }
-        printf("Matrice 1 Display:\n");
+        printf("Matrice 1 Display:\n");//display matrice 1
         for(i=0;i<r1;i++)
         {
             for(j=0;j<c1;j++)
                 printf("%d\t",a[i][j]);
             printf("\n");
         }
-        printf("Matrice 2 Display:\n");
+        printf("Matrice 2 Display:\n");//display matrice 2
         for(i=0;i<r2;i++)
         {
             for(j=0;j<c2;j++)
@@ -51,9 +51,9 @@ int main()
             {
                 for(k=0;k<c1;k++)//c1 and r2 same so either is ok
                 {
-                    c[i][j]+=a[i][k]*b[k][j];
+                    c[i][j]+=a[i][k]*b[k][j];//k variable for iteration where row or column isnt constant
                 }
-                printf("%d\t",c[i][j]);
+                printf("%d\t",c[i][j]);//printing values directly since c[i][j] = 0 per iteration
             }
             printf("\n");
         }
